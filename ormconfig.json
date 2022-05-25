@@ -4,5 +4,10 @@
     "host": "localhost",
     "username": "docker",
     "password": "ignite",
-    "database": "rentalx"
+    "database": "rentalx",
+    "entities": ["./src/modules/**/entities/*.ts"],
+    "migrations": ["./src/database/migrations/*.ts"],
+    "cli": {
+        "migrationsDir": "./src/database/migrations"
+    }
 }
