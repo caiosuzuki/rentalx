@@ -2,11 +2,9 @@
 
 **FR**
 Should be able to register a new car.
-Should be able to list all car categories.
 
 **BR**
 Should not be able to register a car with license plate that already is registered.
-Should not be able to change the license plate of a car that is already registered.
 The car should be registered as available by default.
 The user that registers a car must be an administrator.
 
