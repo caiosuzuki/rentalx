@@ -23,8 +23,6 @@ The user does not need to be logged in to list cars.
 
 **FR**
 Should be able to register a car specification.
-Should be able to list all car specifications.
-Should be able to list all cars.
 
 **BR**
 Should not be able to register a specification for a car that is not registered.

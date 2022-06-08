@@ -14,14 +14,23 @@ class SpecificationsRepository implements ISpecificationsRepository {
     this.repository = getRepository(Specification);
   }
 
-  async create({ name, description }: ICreateSpecificationDTO): Promise<void> {
+  async create({
+    name,
+    description,
+  }: ICreateSpecificationDTO): Promise<Specification> {
     const specification = this.repository.create({ name, description });
 
     await this.repository.save(specification);
+
+    return specification;
   }
 
   findByName(name: string): Promise<Specification> {
     return this.repository.findOne({ name });
+  }
+
+  findByIds(ids: string[]): Promise<Specification[]> {
+    return this.repository.findByIds(ids);
   }
 }
 
