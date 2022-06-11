@@ -1,4 +1,4 @@
-import { MigrationInterface, QueryRunner, Table } from "typeorm";
+import { MigrationInterface, QueryRunner, Table, TableUnique } from "typeorm";
 
 export class CreateRentals1654732012138 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
@@ -27,6 +27,7 @@ export class CreateRentals1654732012138 implements MigrationInterface {
           {
             name: "end_date",
             type: "timestamp",
+            isNullable: true,
           },
           {
             name: "expected_return_date",
@@ -35,6 +36,7 @@ export class CreateRentals1654732012138 implements MigrationInterface {
           {
             name: "total",
             type: "numeric",
+            isNullable: true,
           },
           {
             name: "created_at",

@@ -50,3 +50,4 @@ Should be able to register a car rental.
 The rental must have a duration of at least 24 hours.
 Should not be able to register a rental if there's an on-going rental for the same user.
 Should not be able to register a rental if there's an on-going rental for the same car.
+User requesting a rental must be logged in.
