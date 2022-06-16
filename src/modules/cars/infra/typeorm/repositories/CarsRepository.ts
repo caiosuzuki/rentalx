@@ -1,5 +1,5 @@
 import { TsJestCompiler } from "ts-jest";
-import { getRepository, Repository } from "typeorm";
+import { getRepository, QueryBuilder, Repository } from "typeorm";
 
 import { ICreateCarDTO } from "@modules/cars/dtos/ICreateCarDTO";
 import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
@@ -68,6 +68,16 @@ class CarsRepository implements ICarsRepository {
       carsQuery.andWhere("name = :name", { name });
     }
     return carsQuery.getMany();
+  }
+
+  async updateAvailability(id: string, available: boolean): Promise<void> {
+    await this.repository
+      .createQueryBuilder()
+      .update()
+      .set({ available })
+      .where("id = :id")
+      .setParameters({ id })
+      .execute();
   }
 }
 
