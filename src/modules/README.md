@@ -74,3 +74,14 @@ Should be able to listing all rentals for a user.
 
 **BR**
 User must be logged in.
+
+# Password retrieval
+
+**FR**
+User should be able to retrive their password informing their email.
+User should get and email with the step-by-step tutorial to retrieve their password.
+User should be able to inform a new password.
+
+**BR**
+User must inform a new password.
+Password retrieval link must expire in 3 hours.
