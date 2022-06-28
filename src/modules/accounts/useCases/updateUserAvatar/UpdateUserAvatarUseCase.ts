@@ -14,10 +14,11 @@ class UpdateUserAvatarUseCase {
   constructor(
     @inject("UsersRepository")
     private usersRepository: IUsersRepository,
-    @inject("LocalStorageProvider")
+    @inject("StorageProvider")
     private storageProvider: IStorageProvider
   ) {}
   async execute({ user_id, avatar_file }: IRequest): Promise<void> {
+    console.log(this.storageProvider);
     const user = await this.usersRepository.findById(user_id);
 
     if (user.avatar) {
