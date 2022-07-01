@@ -4,6 +4,7 @@
     "aws-sdk": "^2.1162.0",
     "bcrypt": "^5.0.1",
     "class-transformer": "^0.5.1",
+    "cors": "^2.8.5",
     "csv-parse": "^5.0.4",
     "dayjs": "^1.11.3",
     "dotenv": "^16.0.1",
