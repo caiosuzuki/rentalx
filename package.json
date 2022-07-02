@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@sentry/node": "^7.4.1",
+    "@sentry/tracing": "^7.4.1",
     "@types/mime": "^2.0.3",
     "aws-sdk": "^2.1162.0",
     "bcrypt": "^5.0.1",
